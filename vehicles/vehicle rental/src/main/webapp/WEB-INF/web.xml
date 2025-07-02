@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+  <servlet>
+        <servlet-name>owner_reg</servlet-name>
+        <servlet-class>servlet.owner_reg</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>owner_reg</servlet-name>
+        <url-pattern>/owner_registration</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>OwnerDashboardOnLoadServlet</servlet-name>
+        <servlet-class>servlet.OwnerDashboardOnLoadServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>OwnerDashboardOnLoadServlet</servlet-name>
+        <url-pattern>/ownerdashboard</url-pattern>
+    </servlet-mapping>
+    
+    
+  <servlet>
+        <servlet-name>ownerlogin</servlet-name>
+        <servlet-class>servlet.ownerlogin</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>ownerlogin</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AddVehicleServlet</servlet-name>
+        <servlet-class>servlet.AddVehicleServlet</servlet-class>
+        <multipart-config>
+        <max-file-size>10485760</max-file-size> <!-- 10MB -->
+        <max-request-size>52428800</max-request-size> <!-- 50MB -->
+        <file-size-threshold>1048576</file-size-threshold> <!-- 1MB -->
+    </multipart-config>
+    </servlet>
+	
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>AddVehicleServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+      
+
+	 <servlet>
+        <servlet-name>ListAllVehicles</servlet-name>
+        <servlet-class>servlet.ListAllVehicles</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>ListAllVehicles</servlet-name>
+        <url-pattern>/listings</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>AddCardServlet</servlet-name>
+        <servlet-class>servlet.AddCardServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>AddCardServlet</servlet-name>
+        <url-pattern>/addcard</url-pattern>
+    </servlet-mapping>
+    
+       <servlet>
+        <servlet-name>EditCardServlet</servlet-name>
+        <servlet-class>servlet.EditCardServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>EditCardServlet</servlet-name>
+        <url-pattern>/editcard</url-pattern>
+    </servlet-mapping>
+    
+        <servlet>
+        <servlet-name>DeleteCardDetailsServlet</servlet-name>
+        <servlet-class>servlet.DeleteCardDetailsServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>DeleteCardDetailsServlet</servlet-name>
+        <url-pattern>/deletecard</url-pattern>
+    </servlet-mapping>
+    
+            <servlet>
+        <servlet-name>UpdateCardServlet</servlet-name>
+        <servlet-class>servlet.UpdateCardServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>UpdateCardServlet</servlet-name>
+        <url-pattern>/updatecard</url-pattern>
+    </servlet-mapping>
+</web-app>
